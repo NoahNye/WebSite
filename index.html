@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)file:///C:/Users/Noah/Dropbox/WebSite/index.html#top -->
+<!-- saved from url=(0048)file:///C:/Users/Noah/Dropbox/WebSite/index.html -->
 <html lang="zh-CN" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,103 +8,708 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="file:///C:/Users/Noah/Dropbox/WebSite/css/bootstrap.min.css" rel="stylesheet">
-    <link href="file:///C:/Users/Noah/Dropbox/WebSite/css/user1.css" rel="stylesheet">
-  
-    <link href="file:///C:/Users/Noah/Dropbox/WebSite/css/docs.min.css" rel="stylesheet">
-  
-
-
-
+    <link href="./stickup.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/user1.css" rel="stylesheet">
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <style type="text/css"></style><style type="text/css"></style></head>
-  <body style="">
+<style type="text/css">
+    /* Custom Styles */
+   
+    ul.nav-tabs{
+        width: 140px;
+        margin-top: 220px;
+		margin-left:-350px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+    ul.nav-tabs li{
+        margin: 0;
+        border-top: 1px solid #ddd;
+    }
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+    ul.nav-tabs li a{
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 0;
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+        color: #fff;
+        background: #0088cc;
+        border: 1px solid #0088cc;
+    }
+    ul.nav-tabs li:first-child a{
+        border-radius: 4px 4px 0 0;
+    }
+    ul.nav-tabs li:last-child a{
+        border-radius: 0 0 4px 4px;
+    }
+    ul.nav-tabs.affix{
+        top: 30px; /* Set the top position of pinned element */
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#myNav").affix({
+        offset: { 
+            top: 125 
+     	}
+    });
+});
+
+</script>
 
 
 
+</head>
+<body>
 
 
-  <div id="login"><a>注册</a>|<a>登录</a></div>
-     <h1><img alt="Brand" src="./index_files/logo.jpg">美食广场
-     </h1>
+<!--登陆-->
 
-        
 
-     
+  <div id="login">
+  <form class="form-inline">
+  <div class="form-group">
   
+    <label class="sr-only" for="exampleInputEmail3">用户名</label>
+    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
 
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Brand</a>
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPassword3">密码</label>
+    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="密码">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">登陆</button>
+  <button type="submit" class="btn btn-default">注册</button>
+
+</form>
+<!--登陆结束-->
+
+</div>
+     <h1><img alt="Brand" src="./index_files/logo.jpg">海南特色美食</h1>
+
+
+<!-- 图片轮播 -->
+
+<div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-captions" data-slide-to="0" class=""></li>
+        <li data-target="#carousel-example-captions" data-slide-to="1" class="active"></li>
+        <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox" align="center">
+        <div class="item">
+          <img alt="300x200" src="./index_files/11.JPG" data-holder-rendered="true">
+          <div class="carousel-caption">
+            <h3>文昌鸡</h3>
+            <p style="color:#ccc">文昌鸡是海南省文昌市地区最负盛名的汉族传统名菜，海南四大名菜之首，在海南有无鸡不成宴的说法，是每一位到海南旅游的人必尝的美味。</p>
+          </div>
+        </div>
+        <div class="item active">
+          <img alt="300x200" src="./index_files/12.JPG" data-holder-rendered="true">
+          <div class="carousel-caption">
+            <h3>和乐蟹</h3>
+            <p style="color:#ccc">产于万宁市一带海中的和乐蟹，膏满肉肥，为其它青蟹罕见，特别是其脂膏，金黄油亮，犹如咸鸭蛋黄，香味扑鼻。是海南四大名菜之一。</p>
+          </div>
+        </div>
+        <div class="item">
+          <img alt="300x200" src="./index_files/13.JPG" data-holder-rendered="true">
+          <div class="carousel-caption">
+            <h3>加积鸭</h3>
+            <p style="color:#ccc">加积鸭，俗称“番鸭”，是海南一带的汉族名菜，属于海派菜。此菜皮白肉厚，香气诱人。佐料助味，清爽脆滑，耐人寻味。琼籍华侨早年从国外引进的良种鸭，最早在琼海市加积镇养殖繁衍，而又以该镇加祥街一户丁姓居民饲养的番鸭最为出名。</p>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#carousel-example-captions" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#carousel-example-captions" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"></li>
-        <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Link</a></li>
-        <li class="dropdown">
-          <a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Another action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="搜索">
+<!--     轮播结束 -->
+
+
+<!-- 固定导航 -->
+
+    <div class="navbar-wrapper stuckMenu" style="position: relative; top: 0px;">
+    <div class="container">
+      <div class="navbarwrapper">
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="menuItem active">
+                  <a href="./index.html">首页</a>
+                </li>
+                <li></li><li class="menuItem">
+                     <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#yw">东山羊</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#sx">和乐蟹</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#wl">加积鸭</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#hx">陵水酸粉</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#sw">文昌鸡</a>
+                </li><li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#zz">做美食</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#dl">吃美食</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#yy">写美食</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#more">赞助</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-default">确定</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Link</a></li>
-        <li class="dropdown">
-          <a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Another action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/index_files/index.html">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+      </div>
+    </div>
+  </div>
+
+
+  <!--end导航-->
+  <div id="contents" style="margin-left: 130px; margin-right: 130px; margin-top: 0px;">
+    <div id="home" class="row featurette container marketing">
+       <div class="row">
+      <h1 style="margin-top: 100px;">海南特色美食</h1>
+      <p>
+       本网站致力于推广本地美食及相关服务。
+      </p>
+    </div>
+       </div>
+    <div id="yw" class="row featurette">
+      <h1 style="margin-top: 100px;">东山羊</h1>
+      <img src="./index_files/dsy.jpg" class="img-rounded">
+      <p>海南东山羊，由于主产于海南万宁的东山岭，所以被当地人简称为“东山羊”，东山羊以优质的羊肉而闻名岛内外，它与加积鸭、和乐蟹、文昌鸡被人们并称为海南四 大名菜。2009年，海南东山羊被海南省农业厅列入第一批畜禽遗传资源保护品种名录。在海南全省均有分布，尤以万宁、琼山、澄迈县等市县最多。</p>
+    </div>
+    <div id="sx" class="row featurette"> 
+      <h1 style="margin-top: 100px;">和乐蟹</h1>
+      <img src="./index_files/hlx.jpg" class="img-rounded">
+      <p>产于万宁市一带海中的和乐蟹，膏满肉肥，为其它青蟹罕见，特别是其脂膏，金黄油亮，犹如咸鸭蛋黄，香味扑鼻。是海南四大名菜之一。</p>
+    </div>
+    <div id="wl" class="row featurette">
+      <h1 style="margin-top: 100px;">加积鸭</h1>
+      <img src="./index_files/jjy.jpg" class="img-rounded">
+      <p>加积鸭，俗称“番鸭”，是海南一带的汉族名菜，属于海派菜。此菜皮白肉厚，香气诱人。佐料助味，清爽脆滑，耐人寻味。琼籍华侨早年从国外引进的良种鸭，最早在琼海市加积镇养殖繁衍，而又以该镇加祥街一户丁姓居民饲养的番鸭最为出名。</p>
+    </div>
+    <div id="hx" class="row featurette">
+      <h1 style="margin-top: 100px;">陵水酸粉</h1>
+      <img src="./index_files/lssf.jpg" class="img-rounded">
+      <p>陵水酸粉是海南省的一种特色小吃，酸辣甜香，佐料丰富，味道极其鲜美，令人回味无穷。陵水酸粉有时也称海南粉.因为陵水是海南省的一个县，全名为陵水黎族自治县，由于陵水制作的酸粉最为正宗，也最好吃，陵水酸粉的名称即由此而来。随着陵水酸粉在海南省内传播，其他一些市县也有人制作酸粉，渐渐地对大陆人来说就有了一个海南粉的名称。</p>
+    </div>
+    <div id="sw" class="row featurette">
+      <h1 style="margin-top: 100px;">文昌鸡</h1>
+      <img src="./index_files/wcj.jpg" class="img-rounded">
+      <p>文昌鸡是海南省文昌市地区最负盛名的汉族传统名菜，海南四大名菜之首，在海南有无鸡不成宴的说法，是每一位到海南旅游的人必尝的美味。</p>
+    </div>
+    <div id="zz" class="row featurette">
+      <h1 style="margin-top: 100px;">做美食</h1>
+      <p>
+       详情请登录<a href="baidu.com">www.baidu.com</a>
+      </p>
+    </div>
+    <div id="dl" class="row featurette">
+      <h1 style="margin-top: 100px;">吃美食</h1>
+      
+<table cellSpacing=0 cellPadding=0 width=776 align=center border=0>
+        <tr>
+                <td width="220" rowspan="3"><img src="./images/logo.jpg"
+                        width="200"></td>
+                <td width="556" height="36">&nbsp;</td>
+        </tr>
+        <tr>
+                <TD
+                        style="FONT-SIZE: 24pt; FILTER: blur(add=1, direction=120, strength=5); WIDTH: 100%; COLOR: #000000; FONT-FAMILY: arial; POSITION: relative"
+                        noWrap><B><span class="STYLE1"></span>
+                网上订餐系统</B></TD>
+        </tr>
+        <tr>
+                <td>&nbsp;</td>
+        </tr>
+</table>
+ 
+<TABLE cellSpacing=0 cellPadding=0 width=776 align=center border=0>
+        <TBODY>
+                <TR>
+                        <TD background="images/001.gif" height=42>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD width=0 height=20></TD>
+                                                <TD align=middle><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">&nbsp;|&nbsp;</FONT><A
+                                                        href="#" target=_self><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">网站首页</FONT></A><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">&nbsp;|&nbsp;</FONT><A
+                                                        href="#" target=_self><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">关于我们</FONT></A><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">&nbsp;|&nbsp;</FONT><A
+                                                        href="#" target=_self><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">定餐帮助</FONT></A><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">&nbsp;|&nbsp;</FONT><A
+                                                        href="#" target=_self><FONT
+                                                       <A
+                                                        href="#" target=_self><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">客服中心</FONT></A><FONT
+                                                        style="FONT-SIZE: 13px; COLOR: #000000">&nbsp;|&nbsp;</FONT></TD>
+                                        </TR>
+                                </TBODY>
+                        </TABLE>
+                        </TD>
+                </TR>
+        </TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=776 align=center border=0>
+        <TBODY>
+                <TR vAlign=top>
+                        <TD width=181 background="images/002.gif">
+                       
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD align=middle height=30><FONT color=#000000> <SCRIPT
+                                                        language=javascript src="images/DateTime2.js"></SCRIPT> <SCRIPT
+                                                        language=javascript>tick('cn');</SCRIPT> </FONT></TD>
+                                        </TR>
+                                </TBODY>
+                        </TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD>&nbsp;</TD>
+                                        </TR>
+                                        <TR>
+                                                <TD background="images/003.gif" height=4></TD>
+                                        </TR>
+                                        <TR>
+                                                <TD>&nbsp;</TD>
+                                </TBODY>
+                        </TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD>&nbsp;</TD>
+                                        </TR>
+                                        <TR>
+                                                <TD background="images/003.gif" height=4></TD>
+                                        </TR>
+                                        <TR>
+                                                <TD align=middle>
+                                                <TABLE cellSpacing=0 cellPadding=0 width="94%" border=0>
+                                                        <TBODY>
+                                                                <TR>
+                                                                        <TD>&nbsp;</TD>
+                                                                </TR>
+                                                        </TBODY>
+                                                </TABLE>
+                                                </TD>
+                                        </TR>
+                                </TBODY>
+                        </TABLE>
+                        </TD>
+                        <TD>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD><IMG height=72 src="images/0001.jpg" width=595></TD>
+                                        </TR>
+                                </TBODY>
+                        </TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD width="90%">
+                                                <div class='cnt'><marquee
+                                                        style="FONT-SIZE: 13px; COLOR: #0000FF" scrollamount='5'
+                                                        direction='left'> 欢迎订餐！</marquee></div>
+                                                &nbsp;&nbsp;</TD>
+                                        </TR>
+                                </TBODY>
+                        </TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD align=right background="images/004.gif" height=19></TD>
+                                        </TR>
+                                </TBODY>
+                        </TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width="96%" align=center border=0>
+                                <TBODY>
+                                        <TR>
+                                                <TD>
+ 
+                                                <TABLE cellSpacing=1 cellPadding=1 width="100%" align=center
+                                                        bgColor=#c0c0c0 border=0>
+                                                        <TBODY>
+                                                              
+                                                        </TBODY>
+                                                </TABLE>
+                                                <BR>
+                                                <TABLE cellSpacing=2 cellPadding=1 width="100%" align=center
+                                                        border=0>
+                                                        <TBODY>
+                                                                <TR>
+                                                                        <TD>
+                                                                        <TABLE height="100%" cellSpacing=1 cellPadding=2 border=0>
+                                                                                <TBODY>
+                                                                                        <TR>
+                                                                                                <TD vAlign=top width=90 height=90><A href=#
+                                                                                                        target=_blank><IMG height=80 alt=点击图片查看内容
+                                                                                                        src="images/dsy.jpg" width=80 border=0></A></TD>
+                                                                                                <TD vAlign=top>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width="100%" align=center
+                                                                                                        border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD><A href=#yw target=_blank><STRONG>东山羊</STRONG></A></TD>
+                                                                                                                </TR>
+                                                                                                                <TR>
+                                                                                                                        <TD height=21><FONT color=#ff0000>现价：人民币50元</FONT><BR>
+                                                                                                                        <a href="#">美味可口</a>！</TD>
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                        <TR>
+                                                                                                <TD height=28>编号: 22</TD>
+                                                                                                <TD>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width=145 border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD align="middle" width="70"><a href="#"><img
+                                                                                                                                src="images/buy.jpg" border="0"
+                                                                                                                                longdesc="shoppingCart.html"></a></TD>
+                                                                                                                     
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                </TBODY>
+                                                                        </TABLE>
+                                                                        </TD>
+                                                                        <TD>
+                                                                        <TABLE height="100%" cellSpacing=1 cellPadding=2 border=0>
+                                                                                <TBODY>
+                                                                                        <TR>
+                                                                                                <TD vAlign=top width=90 height=90><A href=#sx
+                                                                                                        target=_blank><IMG height=80 alt=点击图片查看内容
+                                                                                                        src="images/hlx.jpg" width=80 border=0></A></TD>
+                                                                                                <TD vAlign=top>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width="100%" align=center
+                                                                                                        border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD><A href=# target=_blank><STRONG>和乐蟹</STRONG></A></TD>
+                                                                                                                </TR>
+                                                                                                                <TR>
+                                                                                                                        <TD height=21><FONT color=#ff0000>现价：人民币5元</FONT><BR>
+                                                                                                                        时令绿色蔬菜！</TD>
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                        <TR>
+                                                                                                <TD height=28>编号: 21</TD>
+                                                                                                <TD>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width=145 border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD align=middle width=70><A href=#><IMG
+                                                                                                                                src="images/buy.jpg" border=0></A></TD>
+                                                                                                                        
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                </TBODY>
+                                                                        </TABLE>
+                                                                        </TD>
+                                                                </TR>
+                                                                <TR>
+                                                                        <TD>
+                                                                        <TABLE height="100%" cellSpacing=1 cellPadding=2 border=0>
+                                                                                <TBODY>
+                                                                                        <TR>
+                                                                                                <TD vAlign=top width=90 height=90><A href=#
+                                                                                                        target=_blank><IMG height=80 alt=点击图片查看内容
+                                                                                                        src="images/jjy.jpg" width=80 border=0></A></TD>
+                                                                                                <TD vAlign=top>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width="100%" align=center
+                                                                                                        border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD><A href=#wl target=_blank><STRONG>加积鸭</STRONG></A></TD>
+                                                                                                                </TR>
+                                                                                                                <TR>
+                                                                                                                        <TD height=21><FONT color=#ff0000>现价：人民币8元</FONT><BR>
+                                                                                                                        京味小吃！</TD>
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                        <TR>
+                                                                                                <TD height=28>编号: 20</TD>
+                                                                                                <TD>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width=145 border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD align=middle width=70><A href=#><IMG
+                                                                                                                                src="images/buy.jpg" border=0></A></TD>
+                                                                                                                        
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                </TBODY>
+                                                                        </TABLE>
+                                                                        </TD>
+                                                                        <TD>
+                                                                        <TABLE height="100%" cellSpacing=1 cellPadding=2 border=0>
+                                                                                <TBODY>
+                                                                                        <TR>
+                                                                                                <TD vAlign=top width=90 height=90><A href=#
+                                                                                                        target=_blank><IMG height=80 alt=点击图片查看内容
+                                                                                                        src="images/lssf.jpg" width=80 border=0></A></TD>
+                                                                                                <TD vAlign=top>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width="100%" align=center
+                                                                                                        border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD><A href=#hx target=_blank><STRONG>陵水酸粉</STRONG></A></TD>
+                                                                                                                </TR>
+                                                                                                                <TR>
+                                                                                                                        <TD height=21><FONT color=#ff0000>现价：人民币10元</FONT><BR>
+                                                                                                                        美味可口！</TD>
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                        <TR>
+                                                                                                <TD height=28>编号: 19</TD>
+                                                                                                <TD>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width=145 border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD align=middle width=70><A href=#><IMG
+                                                                                                                                src="images/buy.jpg" border=0></A></TD>
+                                                                                                                        
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                </TBODY>
+                                                                        </TABLE>
+                                                                        </TD>
+                                                                </TR>
+                                                                <TR>
+                                                                        <TD>
+                                                                        <TABLE height="100%" cellSpacing=1 cellPadding=2 border=0>
+                                                                                <TBODY>
+                                                                                        <TR>
+                                                                                                <TD vAlign=top width=90 height=90><A href=#
+                                                                                                        target=_blank><IMG height=80 alt=点击图片查看内容
+                                                                                                        src="images/wcj.jpg" width=80 border=0></A></TD>
+                                                                                                <TD vAlign=top>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width="100%" align=center
+                                                                                                        border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD><A href=#sw target=_blank><STRONG>文昌鸡</STRONG></A></TD>
+                                                                                                                </TR>
+                                                                                                                <TR>
+                                                                                                                        <TD height=21><FONT color=#ff0000>现价：人民币6元</FONT><BR>
+                                                                                                                        经典搭配！</TD>
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                        <TR>
+                                                                                                <TD height=28>编号: 18</TD>
+                                                                                                <TD>
+                                                                                                <TABLE cellSpacing=1 cellPadding=0 width=145 border=0>
+                                                                                                        <TBODY>
+                                                                                                                <TR>
+                                                                                                                        <TD align=middle width=70><A href=#><IMG
+                                                                                                                                src="images/buy.jpg" border=0></A></TD>
+                                                                                                                        
+                                                                                                                </TR>
+                                                                                                        </TBODY>
+                                                                                                </TABLE>
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                </TBODY>
+                                                                        </TABLE>
+                                                                        </TD>
+                                                                        <TD>
+                                                                        <TABLE height="100%" cellSpacing=1 cellPadding=2 border=0>
+                                                                           
+                                                                                                </TD>
+                                                                                        </TR>
+                                                                                   
+                                                                                </TBODY>
+                                                                        </TABLE>
+                                                                        </TD>
+                                                                </TR>
+                                                             
+                                                       
+                                                        </TBODY>
+                                                </TABLE>
+                                                </TD>
+                                        </TR>
+                                </TBODY>
+                        </TABLE>
+                        </TD>
+                </TR>
+        </TBODY>
+</TABLE>
+
+
+    </div>
+    <div id="yy" class="row featurette">
+      <h1 style="margin-top: 100px;">写美食</h1>
+      <table border=1>
+<caption>留言薄</caption>
+<tr>
+    <td>姓名：</td>
+    <td><input type='text' /></td>
+</tr>
+<tr>
+    <td>电话：</td>
+    <td><input type='text' /></td>
+</tr>
+<tr>
+    <td>Email地址：</td>
+    <td><input type='text' /></td>
+</tr>
+<tr>
+    <td>留言：</td>
+    <td><textarea rows="10" cols="30" ></textarea></td>
+</tr>
+<tr><td colspan="2" align='center'><input type='button' value='提交' />    <input type='button' value='清除' /></td></tr>
+</table>
+     
+    </div>
+    <div id="more" class="row featurette">
+      <h1 style="margin-top: 100px;">赞助</h1>
+      <p>
+      支付宝账户：<a href="#">海南@特色美食.com</a>
+      </p>
+    </div>
+  </div>
+  
+  
+
+
+<!--左侧导航-->
+<!-- <body data-spy="scroll" data-target="#myScrollspy">
+<div class="container">
+<div class="jumbotron">
+<h1>总览</h1>
+</div>
+<div class="row">
+<div class="col-xs-3" id="myScrollspy">
+<ul class="nav nav-tabs nav-stacked affix" id="myNav">
+<li class=""><a href="#section-1">第一部分</a></li>
+<li class="active"><a href="#section-2">第二部分</a></li>
+<li class=""><a href="#section-3">第三部分</a></li>
+<li class=""><a href="#section-4">第四部分</a></li>
+<li class=""><a href="#section-5">第五部分</a></li>
+</ul>
+</div>
+<div class="col-xs-9">
+<h2 id="section-1">第一部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-2">第二部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-3">第三部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-4">第四部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-5">第五部分</h2>
+<p>内容</p>
+</div>
+</div>
+</div>
+
+
+</body> -->
+<!--导航结束-->
+
+
+
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="./index_files/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./index_files/bootstrap.min.js"></script>
-  
-
- <!-- 导航 -->
- 
-    
-      
-    <!--  导航结束 -->
-
-
-    
-
+    <script type="text/javascript" src="file:///C:/Users/Noah/Dropbox/WebSite/js/jquery.js"></script>
+  <script type="text/javascript" src="./index_files/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./index_files/stickUp.min.js"></script>
+  <script type="text/javascript">
+       jQuery(function($) {
+    $(document).ready( function() {
+      $('.navbar-wrapper').stickUp({
+            parts: {
+              0:'home',
+              1:'yw',
+              2: 'sx',
+              3: 'wl',
+              4: 'hx',
+              5: 'sw',
+              6: 'zz',
+              7: 'dl',
+              8: 'yy',
+              9: 'more'
+              
+            },
+            itemClass: 'menuItem',
+            itemHover: 'active',
+            topMargin: 'auto'
+            });
+    });
+    });
+  </script>
 
 </body></html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)file:///C:/Users/Noah/Dropbox/WebSite/a.html -->
+<!-- saved from url=(0069)file:///C:/Users/Noah/Dropbox/WebSite/Bootstrap%20101%20Template.html -->
 <html lang="zh-CN" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,73 +8,438 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
+    <link href="file:///C:/Users/Noah/Dropbox/WebSite/stickup.css" rel="stylesheet">
     <link href="file:///C:/Users/Noah/Dropbox/WebSite/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="file:///C:/Users/Noah/Dropbox/WebSite/css/user1.css" rel="stylesheet">
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <h1>美食广场</h1>
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Brand</a>
+<style type="text/css">
+    /* Custom Styles */
+    ul.nav-tabs{
+        width: 140px;
+        margin-top: 220px;
+		margin-left:-350px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+    ul.nav-tabs li{
+        margin: 0;
+        border-top: 1px solid #ddd;
+    }
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+    ul.nav-tabs li a{
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 0;
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+        color: #fff;
+        background: #0088cc;
+        border: 1px solid #0088cc;
+    }
+    ul.nav-tabs li:first-child a{
+        border-radius: 4px 4px 0 0;
+    }
+    ul.nav-tabs li:last-child a{
+        border-radius: 0 0 4px 4px;
+    }
+    ul.nav-tabs.affix{
+        top: 30px; /* Set the top position of pinned element */
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#myNav").affix({
+        offset: { 
+            top: 125 
+     	}
+    });
+});
+</script>
+
+
+
+</head>
+<body>
+
+
+<!--登陆-->
+
+
+  <div id="login">
+  <form class="form-inline">
+  <div class="form-group">
+  
+    <label class="sr-only" for="exampleInputEmail3">用户名</label>
+    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPassword3">密码</label>
+    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="密码">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">登陆</button>
+  <button type="submit" class="btn btn-default">注册</button>
+
+</form>
+<!--登陆结束-->
+
+</div>
+     <h1><img alt="Brand" src="./Bootstrap 101 Template_files/logo.jpg">海南特色美食</h1>
+
+
+<!-- 图片轮播 -->
+
+<div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-captions" data-slide-to="0" class=""></li>
+        <li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-example-captions" data-slide-to="2" class="active"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox" align="center">
+        <div class="item">
+          <img alt="300x200" src="./images/1.JPEG" data-holder-rendered="true">
+          <div class="carousel-caption">
+            <h3>图片l</h3>
+            <p>内容1</p>
+          </div>
+        </div>
+        <div class="item">
+          <img alt="300x200" src="./images/2.JPEG" data-holder-rendered="true">
+          <div class="carousel-caption">
+            <h3>图片3</h3>
+            <p>内容3</p>
+          </div>
+        </div>
+        <div class="item active">
+          <img alt="300x200" src="./images/3.jpeg" data-holder-rendered="true">
+          <div class="carousel-caption">
+            <h3>图片3</h3>
+            <p>内容3</p>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#carousel-example-captions" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#carousel-example-captions" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Link</a></li>
-        <li class="dropdown">
-          <a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Another action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="搜索">
+<!--     轮播结束 -->
+
+
+<!-- 固定导航 -->
+
+    <div class="navbar-wrapper stuckMenu isStuck" style="position: fixed; top: 0px;">
+    <div class="container">
+      <div class="navbarwrapper">
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/Bootstrap%20101%20Template_files/Bootstrap%20101%20Template.html">首页</a>
+                </li>
+                <li></li><li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#yw">东山羊</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#sx">和乐蟹</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#wl">加积鸭</a>
+                </li>
+                <li class="menuItem active">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#hx">陵水酸粉</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#sw">文昌鸡</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#zz">导航6</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#dl">导航7</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#yy">导航8</a>
+                </li>
+                <li class="menuItem">
+                  <a href="file:///C:/Users/Noah/Dropbox/WebSite/index.html#more">导航9</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-default">确定</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Link</a></li>
-        <li class="dropdown">
-          <a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Another action</a></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="file:///C:/Users/Noah/Dropbox/WebSite/a.html#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+      </div>
+    </div>
+  </div>
+  <!--end导航-->
+  <div id="contents" style="margin-left: 130px; margin-right: 130px; margin-top: 355px;">
+    <div id="home" class="row featurette container marketing">
+       <div class="row">
+      <h1 style="margin-top: 100px;">我是home</h1>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+    </div>
+       </div>
+    <div id="yw" class="row featurette">
+      <h1 style="margin-top: 100px;">东山羊</h1>
+      <img src="./images/dsy.jpg" class="img-rounded">
+      <p>海南东山羊，由于主产于海南万宁的东山岭，所以被当地人简称为“东山羊”，东山羊以优质的羊肉而闻名岛内外，它与加积鸭、和乐蟹、文昌鸡被人们并称为海南四 大名菜。2009年，海南东山羊被海南省农业厅列入第一批畜禽遗传资源保护品种名录。在海南全省均有分布，尤以万宁、琼山、澄迈县等市县最多。</p>
+    </div>
+    <div id="sx" class="row featurette"> 
+      <h1 style="margin-top: 100px;">和乐蟹</h1>
+      <img src="./images/hlx.jpg" class="img-rounded">
+      <p>产于万宁市一带海中的和乐蟹，膏满肉肥，为其它青蟹罕见，特别是其脂膏，金黄油亮，犹如咸鸭蛋黄，香味扑鼻。是海南四大名菜之一。</p>
+    </div>
+    <div id="wl" class="row featurette">
+      <h1 style="margin-top: 100px;">加积鸭</h1>
+      <img src="./images/jjy.jpg" class="img-rounded">
+      <p>加积鸭，俗称“番鸭”，是海南一带的汉族名菜，属于海派菜。此菜皮白肉厚，香气诱人。佐料助味，清爽脆滑，耐人寻味。琼籍华侨早年从国外引进的良种鸭，最早在琼海市加积镇养殖繁衍，而又以该镇加祥街一户丁姓居民饲养的番鸭最为出名。</p>
+    </div>
+    <div id="hx" class="row featurette">
+      <h1 style="margin-top: 100px;">陵水酸粉</h1>
+      <img src="./images/lssf.jpg" class="img-rounded">
+      <p>陵水酸粉是海南省的一种特色小吃，酸辣甜香，佐料丰富，味道极其鲜美，令人回味无穷。陵水酸粉有时也称海南粉.因为陵水是海南省的一个县，全名为陵水黎族自治县，由于陵水制作的酸粉最为正宗，也最好吃，陵水酸粉的名称即由此而来。随着陵水酸粉在海南省内传播，其他一些市县也有人制作酸粉，渐渐地对大陆人来说就有了一个海南粉的名称。</p>
+    </div>
+    <div id="sw" class="row featurette">
+      <h1 style="margin-top: 100px;">文昌鸡</h1>
+      <img src="./images/wcj.jpg" class="img-rounded">
+      <p>文昌鸡是海南省文昌市地区最负盛名的汉族传统名菜，海南四大名菜之首，在海南有无鸡不成宴的说法，是每一位到海南旅游的人必尝的美味。</p>
+    </div>
+    <div id="zz" class="row featurette">
+      <h1 style="margin-top: 100px;">我是政治</h1>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+    </div>
+    <div id="dl" class="row featurette">
+      <h1 style="margin-top: 100px;">我是dl</h1>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+    </div>
+    <div id="yy" class="row featurette">
+      <h1 style="margin-top: 100px;">我是英语</h1>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+    </div>
+    <div id="more" class="row featurette">
+      <h1 style="margin-top: 100px;">我是更多</h1>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+      <p>
+        XXX表示，中方愿意同柬方继续保持高层往来，加强执政党交往，分享治国理政经验。中方支持洪森首相带领柬埔寨人民走
+        符合本国国情的发展道路，支持柬方维护国家安全和稳定的努力，将继续为柬埔寨经济社会发展提供力所能及的帮助，推进农
+        业、旅游等领域合作，实施好柬方水电、煤电、经济特区等项目，结合丝绸之路经济带和21世纪海上丝绸之路建设，带动基础
+        设施互联互通。双方还要扩大人文合作，促进青年交流。
+      </p>
+    </div>
+  </div>
+  
+  
+
+
+<!--左侧导航-->
+<!-- <body data-spy="scroll" data-target="#myScrollspy">
+<div class="container">
+<div class="jumbotron">
+<h1>总览</h1>
+</div>
+<div class="row">
+<div class="col-xs-3" id="myScrollspy">
+<ul class="nav nav-tabs nav-stacked affix" id="myNav">
+<li class=""><a href="#section-1">第一部分</a></li>
+<li class="active"><a href="#section-2">第二部分</a></li>
+<li class=""><a href="#section-3">第三部分</a></li>
+<li class=""><a href="#section-4">第四部分</a></li>
+<li class=""><a href="#section-5">第五部分</a></li>
+</ul>
+</div>
+<div class="col-xs-9">
+<h2 id="section-1">第一部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-2">第二部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-3">第三部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-4">第四部分</h2>
+<p>内容</p>
+<hr>
+<h2 id="section-5">第五部分</h2>
+<p>内容</p>
+</div>
+</div>
+</div>
+
+
+</body> -->
+<!--导航结束-->
+
+
+
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="./Bootstrap 101 Template_files/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./Bootstrap 101 Template_files/bootstrap.min.js"></script>
-  
+    <script type="text/javascript" src="file:///C:/Users/Noah/Dropbox/WebSite/js/jquery.js"></script>
+  <script type="text/javascript" src="./Bootstrap 101 Template_files/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./Bootstrap 101 Template_files/stickUp.min.js"></script>
+  <script type="text/javascript">
+       jQuery(function($) {
+    $(document).ready( function() {
+      $('.navbar-wrapper').stickUp({
+            parts: {
+              0:'home',
+              1:'yw',
+              2: 'sx',
+              3: 'wl',
+              4: 'hx',
+              5: 'sw',
+              6: 'zz',
+              7: 'dl',
+              8: 'yy',
+              9: 'more'
+              
+            },
+            itemClass: 'menuItem',
+            itemHover: 'active',
+            topMargin: 'auto'
+            });
+    });
+    });
+  </script>
+
 </body></html>
